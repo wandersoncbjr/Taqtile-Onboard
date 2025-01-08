@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "EditorConfig.EditorConfig",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "orta.vscode-jest",
+    "stylelint.vscode-stylelint",
+    "streetsidesoftware.code-spell-checker",
+    "msjsdiag.debugger-for-chrome"
+  ]
+}
