@@ -5,14 +5,15 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import prettier from 'eslint-plugin-prettier'
 import react from 'eslint-plugin-react'
+import prettierPlugin from 'eslint-plugin-prettier/recommended'
 
-export default [
+export default tseslint.config(
   { ignores: ['dist'] },
   {
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
-      'plugin:prettier/recommended',
+      prettierPlugin,
     ],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -39,4 +40,4 @@ export default [
       'prettier/prettier': 'error',
     },
   },
-]
+)
