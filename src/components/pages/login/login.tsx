@@ -12,7 +12,7 @@ export function Login() {
         <Divider size='large' />
         <Input expand type='text' label='E-mail' />
         <Divider size='small' />
-        <Input expand label='Senha' type='password' error='Senha Incorreta' />
+        <Input expand label='Senha' type='password' />
         <Divider size='large' />
         <Button expand>Entrar</Button>
       </ContainerCard>
