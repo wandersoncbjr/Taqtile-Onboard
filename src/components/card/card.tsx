@@ -1,18 +1,18 @@
 import React from 'react';
-import './container-card.css';
+import './card.css';
 import { theme } from '../../theme/theme';
 
-interface ContainerCardProps {
+interface CardProps {
   children: React.ReactNode;
 }
 
-const containerCardStyle = {
+const cardStyle = {
   background: theme.colors.Neutral,
   boxShadow: theme.colors.boxShadow,
 };
-export function ContainerCard({ children }: ContainerCardProps) {
+export function Card({ children }: CardProps) {
   return (
-    <div style={containerCardStyle} className='container-card'>
+    <div style={cardStyle} className='container-card'>
       {children}
     </div>
   );

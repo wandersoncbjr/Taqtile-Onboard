@@ -1,5 +1,5 @@
 import { Button } from '../../button/button';
-import { ContainerCard } from '../../container-card/container-card';
+import { Card } from '../../card/card';
 import { Divider } from '../../divider/divider';
 import { Input } from '../../input/input';
 import './Login.css';
@@ -7,7 +7,7 @@ import './Login.css';
 export function Login() {
   return (
     <div className='container-login'>
-      <ContainerCard>
+      <Card>
         <h1>Bem vindo(a) à Instaq!</h1>
         <Divider size='large' />
         <Input expand type='text' label='E-mail' />
@@ -15,7 +15,7 @@ export function Login() {
         <Input expand label='Senha' type='password' />
         <Divider size='large' />
         <Button expand>Entrar</Button>
-      </ContainerCard>
+      </Card>
     </div>
   );
 }
