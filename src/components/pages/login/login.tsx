@@ -8,7 +8,7 @@ export function Login() {
   return (
     <div className='container-login'>
       <ContainerCard>
-        <h1>Bem vindo(a) à Taqtile!</h1>
+        <h1>Bem vindo(a) à Instaq!</h1>
         <Divider size='large' />
         <Input expand type='text' label='E-mail' />
         <Divider size='small' />
