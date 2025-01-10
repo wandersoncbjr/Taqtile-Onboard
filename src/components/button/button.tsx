@@ -7,13 +7,13 @@ interface ButtonProps {
   expand?: boolean;
 }
 
-export function Button({ children, expand, ...rest }: ButtonProps) {
+export function Button({ children, expand }: ButtonProps) {
   const buttonStyle = {
     width: expand ? '100%' : '200px',
     backgroundColor: theme.colors.NeutralLight,
   };
   return (
-    <button {...rest} style={buttonStyle} className='button-element'>
+    <button style={buttonStyle} className='button-element'>
       {children}
     </button>
   );
