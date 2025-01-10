@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import './button.css';
 import { theme } from '../../theme/theme';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps {
   children: ReactNode;
   expand?: boolean;
 }
