@@ -19,9 +19,7 @@ export function Login() {
     formState: { errors },
   } = useForm<LoginFormData>();
 
-  const onSubmit = (data: LoginFormData) => {
-    console.log(data);
-  };
+  const onSubmit = (data: LoginFormData) => {};
 
   return (
     <div className='container-login'>
