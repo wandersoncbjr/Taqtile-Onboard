@@ -31,6 +31,7 @@ export function Login() {
             expand
             type='text'
             label='E-mail'
+            placeholder='Digite seu e-mail'
             {...register('email', {
               required: errorMessages.email.required,
               pattern: {
@@ -45,6 +46,7 @@ export function Login() {
             expand
             type='password'
             label='Senha'
+            placeholder='Digite sua senha'
             {...register('senha', {
               required: errorMessages.senha.required,
               minLength: {
