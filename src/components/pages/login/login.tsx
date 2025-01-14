@@ -1,21 +1,21 @@
-import { Button } from '../../button/button';
-import { Card } from '../../card/card';
-import { Divider } from '../../divider/divider';
-import { Input } from '../../input/input';
+import { validationRegex } from '@validation-forms/validation-regex';
 import './Login.css';
-import { validationRegex } from '../../../validation-forms/validation-regex';
-import { errorMessages } from '../../../validation-forms/validation-messages';
 import { useLoginForm } from './hooks/useLoginForm';
+import { Button } from '@components/button/button';
+import { Input } from '@components/input/input';
+import { Divider } from '@components/divider/divider';
+import { Card } from '@components/card/card';
+import { errorMessages } from '@validation-forms/validation-messages';
 
 export function Login() {
-  const { register, error, handleSubmit, errors, handleForm, loading } = useLoginForm();
+  const { register, error, handleSubmit, errors, handleLoginFormSubmit, loading } = useLoginForm();
 
   return (
     <div className='container-login'>
       <Card>
         <h1>Bem-vindo(a) à Instaq!</h1>
         <Divider size='large' />
-        <form onSubmit={handleSubmit(handleForm)}>
+        <form onSubmit={handleSubmit(handleLoginFormSubmit)}>
           <Input
             expand
             type='text'

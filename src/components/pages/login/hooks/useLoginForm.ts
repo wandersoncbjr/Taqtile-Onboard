@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { useMutation } from '@apollo/client';
-import { LOGIN_MUTATION } from '../../../../graphql/login/mutation';
+import { LOGIN_MUTATION } from 'graphql/mutations/mutation-login/mutation-login';
 
 interface LoginFormData {
   email: string;
@@ -22,7 +22,7 @@ export function useLoginForm() {
     },
   });
 
-  const handleForm = (formData: LoginFormData) => {
+  const handleLoginFormSubmit = (formData: LoginFormData) => {
     login({
       variables: {
         login: {
@@ -38,7 +38,7 @@ export function useLoginForm() {
     error,
     handleSubmit,
     errors,
-    handleForm,
+    handleLoginFormSubmit,
     loading,
   };
 }
