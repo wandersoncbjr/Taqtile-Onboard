@@ -6,6 +6,7 @@ import { Input } from '@components/input/input';
 import { Divider } from '@components/divider/divider';
 import { Card } from '@components/card/card';
 import { errorMessages } from '@validation-forms/validation-messages';
+import { Spinner } from '@components/assets/spinner';
 
 export function Login() {
   const { register, error, handleSubmit, errors, handleLoginFormSubmit, loading } = useLoginForm();
@@ -51,7 +52,7 @@ export function Login() {
           />
           <Divider size='large' />
           <Button expand type='submit' disabled={loading}>
-            Entrar
+            {loading ? <Spinner /> : 'Entrar'}
           </Button>
         </form>
       </Card>
