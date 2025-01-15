@@ -1,4 +1,4 @@
-import { Spinner } from '@components/assets/spinner';
+import { Spinner } from '@components/assets/spinner/spinner';
 import './loading-screen.css';
 
 export function LoadingScreen() {

@@ -6,7 +6,7 @@ import { Input } from '@components/input/input';
 import { Divider } from '@components/divider/divider';
 import { Card } from '@components/card/card';
 import { errorMessages } from '@validation-forms/validation-messages';
-import { Spinner } from '@components/assets/spinner';
+import { Spinner } from '@components/assets/spinner/spinner';
 
 export function Login() {
   const { register, error, handleSubmit, errors, handleLoginFormSubmit, loading } = useLoginForm();
