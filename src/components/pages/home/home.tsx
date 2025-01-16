@@ -1,8 +1,8 @@
-import { Card } from '@components/card/card';
+import { ListUser } from '@components/list-user/list-user';
 import './home.css';
 
 export function Home() {
-  const users = [
+  const userList = [
     { name: 'Wanderson', email: 'wanderson@example.com' },
     { name: 'Lucas Silva', email: 'lucas.silva@example.com' },
     { name: 'Maria Oliveira', email: 'maria.oliveira@example.com' },
@@ -19,24 +19,9 @@ export function Home() {
   ];
 
   return (
-    <Card>
+    <div className='home-container'>
       <h1>Home</h1>
-      <table className='user-table'>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user, index) => (
-            <tr key={index}>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </Card>
+      <ListUser userList={userList} />
+    </div>
   );
 }
