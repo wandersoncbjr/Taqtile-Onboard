@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { useMutation } from '@apollo/client';
 import { LOGIN_MUTATION } from 'graphql/mutations/mutation-login/mutation-login';
+import { useNavigate } from 'react-router-dom';
 
 interface LoginFormData {
   email: string;
@@ -15,10 +16,11 @@ export function useLoginForm() {
   } = useForm<LoginFormData>({
     mode: 'all',
   });
-
+  const navigate = useNavigate();
   const [login, { error, loading }] = useMutation(LOGIN_MUTATION, {
     onCompleted: (data) => {
       localStorage.setItem('token', `${data.login.token}`);
+      navigate('/');
     },
   });
 
