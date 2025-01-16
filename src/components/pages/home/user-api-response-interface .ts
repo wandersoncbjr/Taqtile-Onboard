@@ -1,17 +1,17 @@
-interface PaginationDetails {
+interface pageInfo {
   hasNextPage: boolean;
   hasPreviousPage: boolean;
 }
 
-interface UserDetails {
+interface nodes {
   name: string;
   email: string;
 }
 
 export interface UsersQueryResponse {
   users: {
-    pageInfo: PaginationDetails;
-    nodes: UserDetails[];
+    pageInfo: pageInfo;
+    nodes: nodes[];
     count: number;
   };
 }
