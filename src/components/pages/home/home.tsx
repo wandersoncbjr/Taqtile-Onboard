@@ -10,7 +10,7 @@ export function Home() {
   const [offset, setOffset] = useState(0);
   const limit = 10;
 
-  const { data, error, loading } = useUsersData(offset, limit);
+  const { data, error, loading } = useUsersData({ offset, limit });
 
   const userPaginationDetails = {
     users: data?.users.nodes ?? [],
