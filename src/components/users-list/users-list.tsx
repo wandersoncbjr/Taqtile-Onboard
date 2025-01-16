@@ -10,7 +10,7 @@ interface UserListProps {
   userList: UserData[];
 }
 
-export function ListUser({ userList }: UserListProps) {
+export function UsersList({ userList }: UserListProps) {
   return (
     <Card>
       <table className='user-table'>

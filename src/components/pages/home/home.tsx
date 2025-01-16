@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ListUser } from '@components/list-user/list-user';
+import { UsersList } from '@components/users-list/users-list';
 import './home.css';
 import { LoadingScreen } from '@components/loading-screen/loading-screen';
 import { theme } from 'theme/theme';
@@ -43,7 +43,7 @@ export function Home() {
         <LoadingScreen />
       ) : (
         <>
-          <ListUser userList={userPaginationDetails.users} />
+          <UsersList userList={userPaginationDetails.users} />
           <div className='pagination'>
             <Button onClick={handlePreviousPage} disabled={!userPaginationDetails?.pageInfo?.hasPreviousPage}>
               Previous
