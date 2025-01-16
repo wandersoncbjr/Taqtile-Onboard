@@ -1,5 +1,5 @@
 import { Card } from '@components/card/card';
-import './list-user.css';
+import './users-list.css';
 
 interface UserData {
   name: string;
