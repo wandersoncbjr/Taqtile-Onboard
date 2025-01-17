@@ -5,6 +5,7 @@ import { LoadingScreen } from '@components/loading-screen/loading-screen';
 import { theme } from 'theme/theme';
 import { Button } from '@components/button/button';
 import { useUsersData } from './hooks/use-users-data.';
+import { FloatingActionButton } from '@components/floating-action-button.tsx/floating-action-button';
 
 export function Home() {
   const [offset, setOffset] = useState(0);
@@ -57,6 +58,7 @@ export function Home() {
           </div>
         </>
       )}
+      <FloatingActionButton redirect='/add-user' />
     </div>
   );
 }
