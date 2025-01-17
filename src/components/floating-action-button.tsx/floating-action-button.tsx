@@ -6,14 +6,14 @@ interface FloatingActionButtonProps {
   redirect: string;
 }
 
-const FloatingActionButtonStyle = {
+const floatingActionButtonStyle = {
   backgroundColor: theme.colors.NeutralLight,
   color: theme.colors.Neutral,
 };
 export function FloatingActionButton({ redirect }: FloatingActionButtonProps) {
   const navigate = useNavigate();
   return (
-    <button style={FloatingActionButtonStyle} className='floating-action-button' onClick={() => navigate(redirect)}>
+    <button style={floatingActionButtonStyle} className='floating-action-button' onClick={() => navigate(redirect)}>
       +
     </button>
   );
