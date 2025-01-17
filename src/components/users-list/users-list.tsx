@@ -1,5 +1,5 @@
 import { Card } from '@components/card/card';
-import './list-user.css';
+import './users-list.css';
 
 interface UserData {
   name: string;
@@ -10,7 +10,7 @@ interface UserListProps {
   userList: UserData[];
 }
 
-export function ListUser({ userList }: UserListProps) {
+export function UsersList({ userList }: UserListProps) {
   return (
     <Card>
       <table className='user-table'>
