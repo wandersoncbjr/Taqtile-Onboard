@@ -6,15 +6,17 @@ import './add-user.css';
 import { errorMessages } from '@validation-forms/validation-messages';
 import { validationRegex } from '@validation-forms/validation-regex';
 import { validateBirthDate } from './validate-birth-date';
+import { theme } from 'theme/theme';
 
 export function CreateUser() {
   const { data, loading, error, errors, register, handleSubmit, handleCreateUserSubmit } = UseCreateUser();
-
   return (
     <div className='add-user-screen-container'>
       <Card>
-        <h1>Adicionar usuário</h1>
-        <form onSubmit={handleSubmit(handleCreateUserSubmit)}>
+        <h1>Criar usuário</h1>
+        <form className='form-create-user' onSubmit={handleSubmit(handleCreateUserSubmit)}>
+          {error && <p style={{ color: theme.colors.FeedbackError }}>Erro: {error.message}</p>}
+          {data && <p style={{ color: theme.colors.FeedbackSuccess }}>Usuário criado com sucesso!</p>}
           <Input
             label='Nome Completo'
             expand
@@ -84,6 +86,7 @@ export function CreateUser() {
 
           <div>
             <select
+              className='role-select-create-user'
               {...register('role', {
                 required: errorMessages.role.required,
               })}
@@ -95,14 +98,12 @@ export function CreateUser() {
               <option value='user'>usuário</option>
               <option value='admin'>admin</option>
             </select>
-            {errors.role?.message}
+            {errors.role?.message && <p style={{ color: theme.colors.FeedbackError }}> {errors.role?.message}</p>}
           </div>
           <Button expand type='submit' disabled={loading}>
             {loading ? 'Criando...' : 'Criar Usuário'}
           </Button>
         </form>
-        {error && <p className='error-message'>Erro: {error.message}</p>}
-        {data && <p>Usuário criado com sucesso!</p>}
       </Card>
     </div>
   );

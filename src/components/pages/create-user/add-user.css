@@ -4,5 +4,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+}
+
+.role-select-create-user {
+  padding: 8px;
+  width: 100%;
+  margin: 8px 0 8px 0;
+}
+
+.form-create-user {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
