@@ -1,16 +1,14 @@
 import { Card } from '@components/card/card';
 import './users-list.css';
-
-interface UserData {
-  name: string;
-  email: string;
-}
+import { useNavigate } from 'react-router-dom';
+import { Nodes } from '@components/pages/home/user-api-response-interface ';
 
 interface UserListProps {
-  userList: UserData[];
+  userList: Nodes[];
 }
 
 export function UsersList({ userList }: UserListProps) {
+  const navigate = useNavigate();
   return (
     <Card expand>
       <table className='user-table'>
@@ -21,8 +19,8 @@ export function UsersList({ userList }: UserListProps) {
           </tr>
         </thead>
         <tbody>
-          {userList.map((user, index) => (
-            <tr key={index}>
+          {userList.map((user) => (
+            <tr onClick={() => navigate(`/user-details/${user.id}`)} key={user.id}>
               <td>{user.name}</td>
               <td>{user.email}</td>
             </tr>

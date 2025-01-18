@@ -3,9 +3,10 @@ interface PageInfo {
   hasPreviousPage: boolean;
 }
 
-interface Nodes {
+export interface Nodes {
   name: string;
   email: string;
+  id: string;
 }
 
 export interface UsersQueryResponse {
