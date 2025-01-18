@@ -1,0 +1,22 @@
+.add-user-screen-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.role-select-create-user {
+  padding: 8px;
+  width: 100%;
+  margin: 8px 0 8px 0;
+}
+
+.form-create-user {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.add-user-screen {
+  padding: 32px;
+}

@@ -4,13 +4,15 @@ import { theme } from '../../theme/theme';
 
 interface CardProps {
   children: React.ReactNode;
+  expand?: boolean;
 }
 
-const cardStyle = {
-  background: theme.colors.Neutral,
-  boxShadow: theme.colors.boxShadow,
-};
-export function Card({ children }: CardProps) {
+export function Card({ children, expand }: CardProps) {
+  const cardStyle = {
+    background: theme.colors.Neutral,
+    boxShadow: theme.colors.boxShadow,
+    width: expand ? '100%' : '400px',
+  };
   return (
     <div style={cardStyle} className='container-card'>
       {children}

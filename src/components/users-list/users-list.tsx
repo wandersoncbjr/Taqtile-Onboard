@@ -12,7 +12,7 @@ interface UserListProps {
 
 export function UsersList({ userList }: UserListProps) {
   return (
-    <Card>
+    <Card expand>
       <table className='user-table'>
         <thead>
           <tr>
